@@ -50,7 +50,7 @@ const bodyParser = require('body-parser');
 
 
 // BASIC SERVER CONFIGS
-const port = 5000;
+const port = 4000;
 
 HTTP_SERVER.listen(port, 'localhost', () => {
   console.log('SERVER STARTED IN THE PORT', port);
