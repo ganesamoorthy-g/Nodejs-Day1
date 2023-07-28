@@ -57,6 +57,9 @@ HTTP_SERVER.listen(PORT, "0.0.0.0", (err) => {
   console.log(`Listening on PORT ${PORT}`);
 });
 
+HTTP_SERVER.get('/', function (resquest, response) {
+  response.send("Testing");
+})
 
 // CONFIGURING CORS
 HTTP_SERVER.use(cors());
