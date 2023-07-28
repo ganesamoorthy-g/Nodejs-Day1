@@ -58,11 +58,14 @@ HTTP_SERVER.listen(PORT, "0.0.0.0", (err) => {
 });
 
 HTTP_SERVER.get('/', function (resquest, response) {
-  response.send("Testing");
+  response.send("Hello World!!!! ");
 })
 
 // CONFIGURING CORS
 HTTP_SERVER.use(cors());
+
+
+
 
 // CONFIGURING BODY-PARSER
 HTTP_SERVER.use(bodyParser.json());
