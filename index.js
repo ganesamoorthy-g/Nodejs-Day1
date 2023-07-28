@@ -75,4 +75,4 @@ HTTP_SERVER.use(bodyParser.urlencoded({ extended: false }));
 
 
 // INJECTING API SERVER
-HTTP_SERVER.use('/', require('./app'));
+HTTP_SERVER.use('/v1', require('./app'));
