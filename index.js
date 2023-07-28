@@ -52,8 +52,9 @@ const bodyParser = require('body-parser');
 // BASIC SERVER CONFIGS
 const port = 4000;
 
-HTTP_SERVER.listen(port, 'localhost', () => {
-  console.log('SERVER STARTED IN THE PORT', port);
+HTTP_SERVER.listen(PORT, "0.0.0.0", (err) => {
+  if (err) throw err;
+  console.log(`Listening on PORT ${PORT}`);
 });
 
 
@@ -62,6 +63,7 @@ HTTP_SERVER.use(cors());
 
 // CONFIGURING BODY-PARSER
 HTTP_SERVER.use(bodyParser.json());
+
 // parse application/x-www-form-urlencoded
 HTTP_SERVER.use(bodyParser.urlencoded({ extended: false }));
 
